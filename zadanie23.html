@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadania JS</title>
+</head>
+<body>
+
+<script>
+
+
+// 1. x = a / b
+
+let a = parseFloat(prompt("Podaj a:"));
+let b = parseFloat(prompt("Podaj b:"));
+
+if (b === 0) {
+    document.write("Nie można dzielić przez 0<br>");
+} else {
+    let x1 = a / b;
+    document.write("x = a/b = " + x1 + "<br>");
+}
+
+
+// 2. x = a/b + c/d
+
+let c = parseFloat(prompt("Podaj c:"));
+let d = parseFloat(prompt("Podaj d:"));
+
+if (b === 0 || d === 0) {
+    document.write("Nie można obliczyć (dzielenie przez 0)<br>");
+} else {
+    let x2 = a / b + c / d;
+    document.write("x = a/b + c/d = " + x2 + "<br>");
+}
+
+
+// 3. x = (a+6)/(b-4)
+
+if ((b - 4) === 0) {
+    document.write("Nie można obliczyć (b - 4 = 0)<br>");
+} else {
+    let x3 = (a + 6) / (b - 4);
+    document.write("x = (a+6)/(b-4) = " + x3 + "<br>");
+}
+
+
+// 4. Liczba parzysta
+
+let n = parseInt(prompt("Podaj liczbę całkowitą:"));
+
+if (n % 2 === 0) {
+    document.write(n + " jest parzysta<br>");
+} else {
+    document.write(n + " jest nieparzysta<br>");
+}
+
+
+// 5. Podzielność
+
+let p = parseInt(prompt("Podaj pierwszą liczbę:"));
+let q = parseInt(prompt("Podaj drugą liczbę:"));
+
+if (q === 0) {
+    document.write("Nie można sprawdzić (dzielenie przez 0)<br>");
+} else if (p % q === 0) {
+    document.write(p + " jest podzielne przez " + q + "<br>");
+} else {
+    document.write(p + " NIE jest podzielne przez " + q + "<br>");
+}
+
+
+// 6. Dodatnia / ujemna / zero
+
+let liczba = parseFloat(prompt("Podaj liczbę:"));
+
+if (liczba > 0) {
+    document.write("Liczba jest dodatnia<br>");
+} else if (liczba < 0) {
+    document.write("Liczba jest ujemna<br>");
+} else {
+    document.write("Liczba jest równa 0<br>");
+}
+
+
+// 7. Największa z trzech
+
+let x = parseFloat(prompt("Podaj pierwszą liczbę:"));
+let y = parseFloat(prompt("Podaj drugą liczbę:"));
+let z = parseFloat(prompt("Podaj trzecią liczbę:"));
+
+let max = x;
+
+if (y > max) max = y;
+if (z > max) max = z;
+
+document.write("Największa liczba to: " + max + "<br>");
+
+
+// 8. Sortowanie rosnące
+
+let arr = [x, y, z];
+arr.sort(function(a, b) {
+    return a - b;
+});
+
+document.write("Liczby rosnąco: " + arr.join(", ") + "<br>");
+
+</script>
+
+</body>
+</html>
